@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Eagle-Bold';
+    src: url(./fonts/Eagle-Bold.otf);
+}
+
+@font-face {
+    font-family: 'Eagle-Light';
+    src: url(./fonts/Eagle-Light.otf);
+}
+
+@font-face {
+    font-family: 'Eagle-Book';
+    src: url(./fonts/eagle-5.ttf);
+}
+
 body {
     .tinyText {
         font-family: 'Epilogue', sans-serif;
