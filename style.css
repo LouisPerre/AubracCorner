@@ -4,6 +4,18 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Eagle-Bold";
+  src: url(./fonts/Eagle-Bold.otf);
+}
+@font-face {
+  font-family: "Eagle-Light";
+  src: url(./fonts/Eagle-Light.otf);
+}
+@font-face {
+  font-family: "Eagle-Book";
+  src: url(./fonts/eagle-5.ttf);
+}
 body .tinyText {
   font-family: "Epilogue", sans-serif;
   font-size: 20px;
@@ -30,11 +42,48 @@ body header {
   display: flex;
   justify-content: center;
   height: 100px;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  transition: top 0.2s ease-in-out;
+}
+body header.is-hidden {
+  opacity: 0;
+  -webkit-transform: translate(0, -60px);
+  transition: 0.5s ease;
+}
+body header.is-visible {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  transition: 0.5s ease;
+}
+body header.shadow {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+body header nav {
+  width: 100%;
+  padding: 0 10rem;
+}
+body header nav ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body header nav ul li {
+  list-style: none;
+}
+body header nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  font-family: "Eagle-Light";
 }
 body header img {
   width: 100px;
   height: 100px;
-  margin-top: 40px;
+  margin-top: 5rem;
 }
 body main .heroHeader {
   height: calc(100vh - 100px);
