@@ -39,7 +39,12 @@ body .light {
   font-family: "Eagle-Light";
   src: url(./fonts/Eagle-Light.otf);
 }
-body .blue {
+
+.green {
+  color: #2b8c08 !important;
+}
+
+.blue {
   color: #06277B;
 }
 body body {
@@ -181,6 +186,73 @@ body section.Masonry {
   grid-gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(12, 150px);
+}
+
+body .menu h1 {
+  font-family: "Eagle-Book";
+  text-align: center;
+  font-size: 36px;
+  padding-top: 100px;
+}
+body .menu h2 {
+  font-family: "Eagle-Book";
+  text-align: center;
+  padding-top: 100px;
+}
+body .menu .formula {
+  display: flex;
+  width: 90%;
+  margin: 10px auto;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+body .menu .formula p {
+  text-align: center;
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  body .menu .formula {
+    width: 668px;
+  }
+}
+body .menu .dot {
+  height: 50px;
+  width: 50px;
+  border: 0.1875em solid #0F1C3F;
+  border-color: black;
+  border-radius: 50%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+body .menu .dot p {
+  display: flex;
+  justify-content: center;
+  padding-top: 14px;
+}
+body .menu .lunch .title {
+  color: #06277B;
+}
+body .menu .lunch .subtitle {
+  text-align: center;
+  padding-top: 20px;
+  color: #C64E1C;
+}
+body .menu .lunch h3 {
+  text-align: center;
+  padding-top: 30px;
+  color: #06277B;
+  font-family: "Eagle-Bold";
+}
+body .menu .lunch p {
+  text-align: center;
+}
+body .menu .lunch .flat {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding-top: 10px;
+  width: 90%;
   margin: 0 auto;
   max-width: 70%;
   padding: 2rem 0;
@@ -192,6 +264,17 @@ body section.Masonry {
     grid-gap: 1rem;
     max-width: 95%;
   }
+@media (min-width: 900px) {
+  body .menu .lunch .flat {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+body .menu .lunch .flat-responsive {
+  display: flex;
+}
+body .menu .lunch .flat1 {
+  grid-area: 1/1/2/2;
 }
 body section.Masonry img {
   height: 100%;
@@ -628,6 +711,60 @@ body section.Masonry img {
   body section.Masonry img .item-1 .item-2 main .history .content .paragraphBottom .text .sideSpan {
     width: 5px;
     height: 80%;
+body .menu .lunch .flat3 {
+  grid-area: 2/1/3/2;
+}
+@media (min-width: 900px) {
+  body .menu .lunch .flat3 {
+    grid-area: 1/3/2/4;
+  }
+}
+body .menu .flat4 {
+  grid-area: 2/2/3/3;
+}
+@media (min-width: 900px) {
+  body .menu .flat4 {
+    grid-area: 2/1/3/2;
+  }
+}
+body .menu .flat5 {
+  grid-area: 3/1/4/2;
+}
+@media (min-width: 900px) {
+  body .menu .flat5 {
+    grid-area: 2/2/3/3;
+  }
+}
+body .menu .flat6 {
+  grid-area: 3/2/4/3;
+}
+@media (min-width: 900px) {
+  body .menu .flat6 {
+    grid-area: 2/3/3/4;
+  }
+}
+body .menu .flat7 {
+  grid-area: 4/1/5/2;
+}
+@media (min-width: 900px) {
+  body .menu .flat7 {
+    grid-area: 3/1/4/2;
+  }
+}
+body .menu .flat8 {
+  grid-area: 4/2/5/3;
+}
+@media (min-width: 900px) {
+  body .menu .flat8 {
+    grid-area: 3/2/4/3;
+  }
+}
+body .menu .flat9 {
+  grid-area: 5/1/6/3;
+}
+@media (min-width: 900px) {
+  body .menu .flat9 {
+    grid-area: 3/3/4/4;
   }
 }
 @media (max-width: 599px) and (min-width: 1200px) {

@@ -24,9 +24,10 @@
     src: url(./fonts/eagle-5.ttf);
 }
 
-// Mixins (responsive)
 @mixin for-phone-only {
     @media (max-width: 599px) { @content; }
+  }@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
   }@mixin for-tablet-landscape-up {
     @media (min-width: 900px) { @content; }
   }@mixin for-desktop-up {
@@ -54,6 +55,9 @@
     src: url(./fonts/Eagle-Light.otf);
 }
 
+.green{
+    color: #2b8c08 !important;
+}
 
 .blue{
     color: #06277B;
@@ -711,6 +715,9 @@ section.Masonry {
                     text-align: center;
                     padding-bottom: 20px;
                 }
+                @media screen and (min-width: 768px) {
+                    width: 668px;
+                }
             }
             .dot {
                 height: 50px;
@@ -747,24 +754,70 @@ section.Masonry {
             }
             .flat {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: repeat(3, 1fr);
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
                 padding-top: 10px;
                 width: 90%;
                 margin: 0 auto;
                 grid-row-gap: 73px;
                 padding-bottom: 20px;
+                @include for-tablet-landscape-up(){
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                }
             }
-            .flat1 { grid-area: 1 / 1 / 2 / 2; }
-            .flat2 { grid-area: 1 / 2 / 2 / 3; }
-            .flat3 { grid-area: 1 / 3 / 2 / 4; }
-            .flat4 { grid-area: 2 / 1 / 3 / 2; }
-            .flat5 { grid-area: 2 / 2 / 3 / 3; }
-            .flat6 { grid-area: 2 / 3 / 3 / 4; }
-            .flat7 { grid-area: 3 / 1 / 4 / 2; }
-            .flat8 { grid-area: 3 / 2 / 4 / 3; }
-            .flat9 { grid-area: 3 / 3 / 4 / 4; }
-        }
+            .flat-responsive{
+                display: flex;
+            }
+            .flat1 { 
+                grid-area: 1 / 1 / 2 / 2; 
+            }
+            .flat2 { 
+                grid-area: 1 / 2 / 2 / 3; 
+            }
+            .flat3 { 
+                @include for-tablet-landscape-up(){
+                    grid-area: 1 / 3 / 2 / 4; 
+                }
+                grid-area: 2 / 1 / 3 / 2;
+                }
+            }
+            .flat4 { 
+                @include for-tablet-landscape-up(){
+                    grid-area: 2 / 1 / 3 / 2;
+                } 
+                grid-area: 2 / 2 / 3 / 3;
+            }
+            .flat5 { 
+                @include for-tablet-landscape-up(){
+                    grid-area: 2 / 2 / 3 / 3;
+                }
+                grid-area: 3 / 1 / 4 / 2; 
+            }
+            .flat6 { 
+                @include for-tablet-landscape-up(){
+                    grid-area: 2 / 3 / 3 / 4; 
+                }
+                grid-area: 3 / 2 / 4 / 3;
+            }
+            .flat7 { 
+                @include for-tablet-landscape-up(){
+                    grid-area: 3 / 1 / 4 / 2; 
+                }
+                grid-area: 4 / 1 / 5 / 2;
+            }
+            .flat8 { 
+                @include for-tablet-landscape-up(){
+                    grid-area: 3 / 2 / 4 / 3; 
+                }
+                grid-area: 4 / 2 / 5 / 3;
+            }
+            .flat9 { 
+                @include for-tablet-landscape-up(){
+                    grid-area: 3 / 3 / 4 / 4; 
+                }
+                grid-area: 5 / 1 / 6 / 3;
+            }
         .ogm-info{
             background-color: black;
             color: white;
