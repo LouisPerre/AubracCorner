@@ -214,17 +214,14 @@ body {
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(2, 1fr);
                 padding-top: 10px;
-                width: 90%;
                 margin: 0 auto;
                 grid-row-gap: 73px;
+                grid-column-gap: 40px;
                 padding-bottom: 20px;
                 @include for-tablet-landscape-up(){
                 grid-template-columns: repeat(3, 1fr);
                 grid-template-rows: repeat(3, 1fr);
                 }
-            }
-            .flat-responsive{
-                display: flex;
             }
             .flat1 { 
                 grid-area: 1 / 1 / 2 / 2; 
@@ -286,15 +283,23 @@ body {
             border-bottom-right-radius: 10px;
             border-top-right-radius: 10px;
             display: flex;
+            flex-direction: column;
             font-family: 'Eagle-Bold';
+            @include for-desktop-up(){
+                flex-direction: row;
+            }
             p{
+                @include for-desktop-up(){
                 margin-left: 80px;
+                }
             }
             img{
                 display: flex;
                 flex-wrap: wrap;
                 margin: auto;
-                margin-top: -20px;
+                @include for-desktop-up(){
+                    margin-top: -20px;
+                }
             }
         }
         .extra{
@@ -303,8 +308,23 @@ body {
                 display: flex;
                 margin: 0 auto;
                 width: 80%;
-                justify-content: space-between;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                @include for-desktop-up(){
+              
+                    
+                }
             }
         }
+        // .title-responsive{
+        //     display: flex;
+        //     margin: 0 auto;
+        //     width: 100%;
+        //     justify-content: space-around;
+        //     flex-direction: column;
+        //     @include for-tablet-landscape-up(){
+        //         flex-direction: row;
+        //     }
+        // }
     }
 }
