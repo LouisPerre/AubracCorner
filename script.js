@@ -44,3 +44,21 @@ function showNav() {
     document.querySelector('#navigation-scroll').style.display = 'block'
     document.querySelector(".main-navigation-scroll").classList.add("shadow")
 }
+
+function dayMenu() {
+    document.getElementById("day-menu").style.display = "none";
+    document.getElementById("formula").style.display = "none";
+    document.getElementById("lunch-title").style.display = "none";
+    document.getElementById("left-arrow").style.display = "flex";
+    document.getElementById("right-arrow").style.display = "none";
+    document.getElementById("night-menu").style.display = "flex";
+}
+
+function nightMenu() {
+    document.getElementById("day-menu").style.display = "flex";
+    document.getElementById("formula").style.display = "flex";
+    document.getElementById("lunch-title").style.display = "block";
+    document.getElementById("left-arrow").style.display = "none";
+    document.getElementById("right-arrow").style.display = "flex";
+    document.getElementById("night-menu").style.display = "none";
+}
