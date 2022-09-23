@@ -2,23 +2,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none; /* Propriété standard */
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+    -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+    scroll-behavior: smooth;
 }
+
+
 
 @font-face {
     font-family: 'Eagle-Bold';
     src: url(./fonts/Eagle-Bold.otf);
 }
-
 @font-face {
     font-family: 'Eagle-Light';
     src: url(./fonts/Eagle-Light.otf);
 }
-
 @font-face {
     font-family: 'Eagle-Book';
     src: url(./fonts/eagle-5.ttf);
 }
 
+// Mixins (responsive)
 @mixin for-phone-only {
     @media (max-width: 599px) { @content; }
   }@mixin for-tablet-landscape-up {
@@ -30,6 +36,20 @@
   }
 
   body {
+
+// Animation classes
+.hidden {
+    transform: translateY(120px) translateX(20px);
+}
+.shown {
+    top: 0;
+    opacity: 1;
+    transform: translateY(0px) translateX(0px);
+    transition: 0.2s ease-in;
+}
+
+// Main stream code
+body {
     .tinyText {
         font-family: 'Epilogue', sans-serif;
         font-size: 20px;
@@ -56,6 +76,30 @@
         background-color: red;
     }
 
+    #DivbuttonDark {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin: 0 10px 10px 0;
+        z-index: 8000;
+
+        #buttonDark {
+            border-radius: 9999px;
+            outline: none;
+            border: none;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+            #imgButton {
+                width: 100px;
+                height: 100px;
+                border-radius: 9999px;
+                transition: all 0.3s ease;
+                background-color: white;
+            }
+        }
+    
+    }
+
     header {
 
         display: flex;
@@ -67,9 +111,27 @@
         width: 100%;
         transition: top 0.2s ease-in-out;
 
+        @include for-tablet-landscape-up() {
+            display: none;
+        }
+
+        &.active {
+            height: 100%;
+
+            nav {
+                ul {
+                    li {
+                        display: block;
+                    }
+                }
+            }
+        }
+
         &.is-hidden {
             opacity: 0;
             -webkit-transform: translate(0, -60px);
+            
+            -webkit-transform: translate(0,-120px);
             transition: .5s ease;
         }
 
@@ -93,6 +155,10 @@
                 justify-content: space-between;
                 align-items: center;
 
+                @include for-tablet-landscape-up() {
+                    justify-content: center;
+                }
+
                 li {
                     list-style: none;
 
@@ -101,6 +167,10 @@
                         color: black;
                         font-size: 24px;
                         font-family: 'Eagle-Light';
+                    }
+
+                    @include for-tablet-landscape-up() {
+                        display: none;
                     }
                 }
             }
@@ -113,7 +183,7 @@
         }
     }
 
-    main {
+    main {        
         .heroHeader {
             height: calc(100vh - 100px);
             background-image: url(./img/img-desktop-pain-scaled.jpeg);
@@ -126,6 +196,11 @@
             .text {
                 width: 500px;
                 margin-left: 35rem;
+
+                @include for-desktop-up() {
+                    margin-left: unset;
+                    text-align: center;
+                }
             }
         }
     }
@@ -153,6 +228,152 @@ section.Masonry {
             object-fit: cover;
             @include for-phone-only{
                 width: 100%;
+
+        .bubble_small{
+            transition: 0.5s ease-out;
+            z-index: -1;
+            position: absolute;
+            top: 100vh;
+            right: 0;
+        }
+        .bubble_big{
+            transition: 0.5s ease-out;
+            z-index: -1;
+            position: absolute;
+            top: 150vh;
+            left: 0;
+        }
+        .history{
+            width: 100%;
+            height: 150vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .icons{
+                
+                transition: 0.5s ease-out;
+                margin-top: 10%;
+                z-index: 0;
+                margin-bottom: -6.5%;
+                margin-left: -20%;
+            }
+            .content{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                .paragraphTop{
+                    
+                    transition: 0.5s ease-out;
+                    font-family: 'Eagle-Book';
+                    z-index: 3;
+                    width: 35%;
+                    height: 30%;
+                    background-color: #FAFAFA;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    flex-direction: column;
+                    padding-inline: 50px;
+                    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.24);
+                    margin-bottom: -25%;
+                    margin-right: 20%;
+                    h2{
+                        width: 100%;
+                        height: 25%;
+                        font-size: 24px;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                    }
+                    .text{
+                        font-family: 'Eagle-Light';
+                        width: 90%;
+                        height: 80%;
+                        margin-left: -10%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        flex-direction: row-reverse;
+                        .storyText{
+                            width: 80ch;
+                            padding: 25px;
+                            text-align: left;
+                            line-height: 24px;
+                            font-size: 16px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            .blue{
+                                color: #0066FF;
+                            }
+                            .white{
+                                color: white;
+                                border: 1px solid black;
+                            }
+                            .red{
+                                color: #FF0000;
+                            }
+                        }
+                        .sideSpan{
+                            width: 5px;
+                            height: 80%;
+                            background-color: #C64E1C;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+                .imageRight{
+                    
+                    transition: 0.5s ease-out;
+                    transform: scale(0.9);
+                    margin-right: -30%;
+                    z-index: 2;
+                }
+                .paragraphBottom{
+                    
+                    transition: 0.5s ease-out;
+                    font-family: 'Eagle-Book';
+                    z-index: 0;
+                    width: 35%;
+                    height: 30%;
+                    background-color: #FAFAFA;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    flex-direction: column;
+                    padding-inline: 50px;
+                    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.24);
+                    margin-top: -7%;
+                    margin-left: 0%;
+                    .text{
+                        font-family: 'Eagle-Light';
+                        width: 90%;
+                        height: 100%;
+                        margin-left: -10%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        flex-direction: row;
+                        .storyText{
+                            margin-top: 10%;
+                            width: 80ch;
+                            padding: 25px;
+                            text-align: right;
+                            line-height: 24px;
+                            font-size: 16px;
+                        }
+                        .sideSpan{
+                            width: 5px;
+                            height: 80%;
+                            background-color: #C64E1C;
+                            border-radius: 5px;
+                        }
+                    }
+                }
             }
         }
 
@@ -162,12 +383,184 @@ section.Masonry {
         .item-1 {
             grid-column: 1;
             grid-row: 1;
+    @include for-desktop-up {
+        .hidden {
+            transform: translateY(50px) translateX(10px);
         }
+        main{
+            .bubble_small{
+                top: 100vh;
+                right: 0;
+            }
+            .bubble_big{
+                top: 150vh;
+                left: 0;
+                transform: scale(0.8);
+                margin-left: -10vw;
+            }
 
+            .history{
+                width: 100%;
+                height: 150vh;
+                .icons{
+                    margin-top: 10%;
+                    z-index: 0;
+                    margin-bottom: -20%;
+                    margin-right: 30%;
+                }
+                .content{
+                    width: 100%;
+                    height: 100%;
+                    .paragraphTop{
+                        width: 55%;
+                        height: 30%;
+                        padding-inline: 50px;
+                        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.24);
+                        margin-bottom: -35%;
+                        margin-right: 25%;
+                        h2{
+                            width: 100%;
+                            height: 25%;
+                            font-size: 20px;
+                        }
+                        .text{
+                            width: 90%;
+                            height: 80%;
+                            margin-left: -10%;
+                            .storyText{
+                                width: 80ch;
+                                padding: 25px;
+                                line-height: 20px;
+                                font-size: 14px;
+                            }
+                            .sideSpan{
+                                width: 5px;
+                                height: 80%;
+                            }
+                        }
+                    }
+                    .imageRight{
+                        transform: scale(0.8);
+                        margin-right: -30%;
+                    }
+                    .paragraphBottom{
+                        width: 50%;
+                        height: 25%;
+                        padding-inline: 50px;
+                        margin-top: -15%;
+                        margin-left: -5%;
+                        .text{
+                            width: 90%;
+                            height: 100%;
+                            margin-left: -10%;
+                            .storyText{
+                                margin-top: 10%;
+                                width: 80ch;
+                                padding: 25px;
+                                line-height: 20px;
+                                font-size: 14px;
+                            }
+                            .sideSpan{
+                                width: 5px;
+                                height: 80%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         .item-2 {
              grid-row: 1/3;
              grid-column: 2;
+    @include for-tablet-landscape-up {
+        .hidden {
+            transform: translateY(0px) translateX(0px);
+        }
+        main{
+            .bubble_small{
+                top: 90vh;
+                right: 0vw;
+            }
+            .bubble_big{
+                top: 130vh;
+                left: -10vw;
+                transform: scale(0.5);
+                margin-left: -20vh;
+            }
+
+            .history{
+                width: 100%;
+                height: 100vh;
+                .icons{
+                    margin-top: 10%;
+                    z-index: 0;
+                    margin-bottom: -50vh;
+                    margin-right: 30%;
+                    transform: scale(0.6);
+                }
+                .content{
+                    width: 100%;
+                    height: 100%;
+                    .paragraphTop{
+                        z-index: 0;
+                        width: 90%;
+                        height: 30%;
+                        padding-inline: 50px;
+                        box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.24);
+                        margin-bottom: 0%;
+                        margin-right: 10%;
+                        h2{
+                            width: 100%;
+                            height: 25%;
+                            font-size: 20px;
+                        }
+                        .text{
+                            width: 90%;
+                            height: 80%;
+                            margin-left: -10%;
+                            .storyText{
+                                width: 80ch;
+                                padding: 25px;
+                                line-height: 20px;
+                                font-size: 14px;
+                            }
+                            .sideSpan{
+                                width: 5px;
+                                height: 80%;
+                            }
+                        }
+                    }
+                    .imageRight{
+                        display: none;
+                    }
+                    .paragraphBottom{
+                        z-index: 0;
+                        width: 90%;
+                        height: 25%;
+                        padding-inline: 20px;
+                        box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.24);
+                        margin-top: 10%;
+                        margin-right: 5%;
+                        .text{
+                            width: 90%;
+                            height: 100%;
+                            margin-left: -10%;
+                            .storyText{
+                                margin-top: 0%;
+                                width: 80ch;
+                                padding: 25px;
+                                line-height: 20px;
+                                font-size: 14px;
+                            }
+                            .sideSpan{
+                                width: 5px;
+                                height: 80%;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         .item-3 {
@@ -198,4 +591,83 @@ section.Masonry {
             grid-row: 3;
             grid-column: 2/4;
         }
+}
+    @include for-phone-only {
+        .hidden {
+            transform: translateY(0px) translateX(0px);
+        }
+        main{
+            .history{
+                width: 100%;
+                height: 125vh;
+                .icons{
+                    margin-top: 15vh;
+                    z-index: 0;
+                    margin-bottom: -5vh;
+                    margin-right: 30%;
+                }
+                .content{
+                    .paragraphTop{
+                        z-index: 0;
+                        width: 95%;
+                        height: 60%;
+                        padding-inline: 50px;
+                        box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.24);
+                        margin-bottom: 0%;
+                        margin-right: 10%;
+                        h2{
+                            width: 100%;
+                            height: 25%;
+                            font-size: 28px;
+                        }
+                        .text{
+                            width: 100%;
+                            height: 80%;
+                            margin-left: -10%;
+                            .storyText{
+                                width: 100ch;
+                                padding: 25px;
+                                line-height: 22px;
+                                font-size: 16px;
+                                margin-bottom: 10%;
+                            }
+                            .sideSpan{
+                                width: 5px;
+                                height: 80%;
+                            }
+                        }
+                    }
+                    .imageRight{
+                        display: none;
+                    }
+                    .paragraphBottom{
+                        z-index: 0;
+                        width: 95%;
+                        height: 60%;
+                        padding-inline: 20px;
+                        box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.24);
+                        margin-top: 10%;
+                        margin-left: 10%;
+                        .text{
+                            width: 100%;
+                            height: 100%;
+                            margin-left: -10%;
+                            .storyText{
+                                margin-top: 0%;
+                                width: 100ch;
+                                padding: 25px;
+                                line-height: 22px;
+                                font-size: 16px;
+                                margin-bottom: 10%;
+                            }
+                            .sideSpan{
+                                width: 5px;
+                                height: 80%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
