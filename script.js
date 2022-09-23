@@ -37,6 +37,8 @@ window.onscroll = function() {
     // console.log(currentScroll)
 
     if (currentScroll > 0 && currentScroll < documentHeight - window.innerHeight ) {
+        console.log('lala')
+
         if (currentScroll > previousScroll) {
             window.setTimeout(hideNav, 300)
         } else if (currentScroll == previousScroll) {
@@ -44,6 +46,7 @@ window.onscroll = function() {
         } else {
             window.setTimeout(showNav, 300)
         }
+
         previousScroll = currentScroll
     }
 }
