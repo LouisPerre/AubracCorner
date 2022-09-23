@@ -18,13 +18,16 @@ window.onscroll = function() {
     // console.log(currentScroll)
 
     if (currentScroll > 0 && currentScroll < documentHeight - window.innerHeight ) {
+        console.log('lala')
+
         if (currentScroll > previousScroll) {
-            window.setTimeout(hideNav, 400)
+            window.setTimeout(hideNav, 300)
         } else if (currentScroll == previousScroll) {
-            window.setTimeout(showNav, 400)
+            window.setTimeout(showNav, 300)
         } else {
-            window.setTimeout(showNav, 400)
+            window.setTimeout(showNav, 300)
         }
+
         previousScroll = currentScroll
     }
 }
