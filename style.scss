@@ -24,9 +24,10 @@
     src: url(./fonts/eagle-5.ttf);
 }
 
-// Mixins (responsive)
 @mixin for-phone-only {
     @media (max-width: 599px) { @content; }
+  }@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
   }@mixin for-tablet-landscape-up {
     @media (min-width: 900px) { @content; }
   }@mixin for-desktop-up {
@@ -49,7 +50,22 @@
 }
 
 // Main stream code
+.light{
+    font-family: 'Eagle-Light';
+    margin-left: 10px;
+    src: url(./fonts/Eagle-Light.otf);
+}
+
+.green{
+    color: #2b8c08 !important;
+}
+
+.blue{
+    color: #06277B;
+}
+
 body {
+    font-family: 'Eagle-Light';
     .tinyText {
         font-family: 'Epilogue', sans-serif;
         font-size: 20px;
@@ -101,7 +117,6 @@ body {
     }
 
     header {
-
         display: flex;
         justify-content: center;
         height: 100px;
@@ -671,3 +686,195 @@ section.Masonry {
         }
     }
 }
+    .menu {
+        background-color: rgba(255, 255, 255, 0.741);
+        width: 70%;
+        margin: 0 auto;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+            h1{
+                font-family: 'Eagle-Book';
+                text-align: center;
+                font-size: 36px;
+                padding-top: 100px;
+            }
+            h2{
+                font-family: 'Eagle-Book';
+                text-align: center;
+                padding-top: 100px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .formula{
+                display: flex;
+                width: 90%;
+                margin: 10px auto;
+                justify-content: space-around;
+                padding-top: 50px;
+                p{
+                    text-align: center;
+                    padding-bottom: 20px;
+                }
+                @media screen and (min-width: 768px) {
+                    width: 668px;
+                }
+            }
+            .dot {
+                height: 50px;
+                width: 50px;
+                border: 0.1875em solid #0F1C3F;
+                border-color: black;
+                border-radius: 50%;
+                display: flex;
+                margin: 0 auto;
+                justify-content: center;
+                p{
+                    display: flex;
+                    justify-content: center;
+                    padding-top: 14px;
+                }
+            }
+        .lunch{
+            .title{
+                color: #06277B;
+            }
+            .subtitle{
+                text-align: center;
+                padding-top: 20px;
+                color:#C64E1C ;
+            }
+            h3{
+                text-align: center;
+                padding-top: 30px;
+                color:#06277B ;
+                font-family: 'Eagle-Bold';
+            }
+            p{
+                text-align: center;
+            }
+            .flat {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+                padding-top: 10px;
+                margin: 0 auto;
+                grid-row-gap: 73px;
+                grid-column-gap: 40px;
+                padding-bottom: 20px;
+                @include for-tablet-landscape-up(){
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                }
+            }
+            .flat1 { 
+                grid-area: 1 / 1 / 2 / 2; 
+            }
+            .flat2 { 
+                grid-area: 1 / 2 / 2 / 3; 
+            }
+            .flat3 { 
+                @include for-tablet-landscape-up(){
+                    grid-area: 1 / 3 / 2 / 4; 
+                }
+                grid-area: 2 / 1 / 3 / 2;
+                }
+            }
+            .flat4 { 
+                @include for-tablet-landscape-up(){
+                    grid-area: 2 / 1 / 3 / 2;
+                } 
+                grid-area: 2 / 2 / 3 / 3;
+            }
+            .flat5 { 
+                @include for-tablet-landscape-up(){
+                    grid-area: 2 / 2 / 3 / 3;
+                }
+                grid-area: 3 / 1 / 4 / 2; 
+            }
+            .flat6 { 
+                @include for-tablet-landscape-up(){
+                    grid-area: 2 / 3 / 3 / 4; 
+                }
+                grid-area: 3 / 2 / 4 / 3;
+            }
+            .flat7 { 
+                @include for-tablet-landscape-up(){
+                    grid-area: 3 / 1 / 4 / 2; 
+                }
+                grid-area: 4 / 1 / 5 / 2;
+            }
+            .flat8 { 
+                @include for-tablet-landscape-up(){
+                    grid-area: 3 / 2 / 4 / 3; 
+                }
+                grid-area: 4 / 2 / 5 / 3;
+            }
+            .flat9 { 
+                @include for-tablet-landscape-up(){
+                    grid-area: 3 / 3 / 4 / 4; 
+                }
+                grid-area: 5 / 1 / 6 / 3;
+            }
+        .ogm-info{
+            background-color: black;
+            color: white;
+            padding: 20px;
+            width: 85%;
+            margin: 0 auto;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Eagle-Bold';
+            @include for-desktop-up(){
+                flex-direction: row;
+            }
+            p{
+                @include for-desktop-up(){
+                margin-left: 80px;
+                }
+            }
+            img{
+                display: flex;
+                flex-wrap: wrap;
+                margin: auto;
+                @include for-desktop-up(){
+                    margin-top: -20px;
+                }
+            }
+        }
+        .extra{
+            padding-top: 30px;
+            .all-title{
+                display: flex;
+                margin: 0 auto;
+                width: 80%;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+        }
+        #night-menu{
+            display: none;
+        }
+        .right-arrow{
+            width: 50px;
+            margin-right: -40px;
+            transform: rotate(180deg);
+            cursor: pointer;
+        }
+        .left-arrow{
+            width: 50px;
+            cursor: pointer;
+            display: none;
+            margin-left: -40px;
+        }
+        
+    }
+
+    }}}}}}
