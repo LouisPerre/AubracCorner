@@ -59,6 +59,34 @@ body {
         background-color: red;
     }
 
+    #DivbuttonDark {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin: 0 10px 10px 0;
+        z-index: 8000;
+        display: none;
+
+        #buttonDark {
+            border-radius: 9999px;
+            outline: none;
+            border: none;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+            #imgButton {
+                width: 100px;
+                height: 100px;
+                border-radius: 9999px;
+                transition: all 0.3s ease;
+                background-color: white;
+            }
+        }
+        @include for-tablet-landscape-up() {
+            display: block;
+        }
+    
+    }
+
     header {
         z-index: 1000;
         display: flex;
@@ -69,6 +97,22 @@ body {
         background-color: white;
         width: 100%;
         transition: top 0.2s ease-in-out;
+
+        @include for-tablet-landscape-up() {
+            display: none;
+        }
+
+        &.active {
+            height: 100%;
+
+            nav {
+                ul {
+                    li {
+                        display: block;
+                    }
+                }
+            }
+        }
 
         &.is-hidden {
             opacity: 0;
@@ -96,6 +140,10 @@ body {
                 justify-content: space-between;
                 align-items: center;
 
+                @include for-tablet-landscape-up() {
+                    justify-content: center;
+                }
+
                 li {
                     list-style: none;
                     a {
@@ -103,6 +151,10 @@ body {
                         color: black;
                         font-size: 24px;
                         font-family: 'Eagle-Light';
+                    }
+
+                    @include for-tablet-landscape-up() {
+                        display: none;
                     }
                 }
             }
@@ -127,6 +179,11 @@ body {
             .text {
                 width: 500px;
                 margin-left: 35rem;
+
+                @include for-desktop-up() {
+                    margin-left: unset;
+                    text-align: center;
+                }
             }
         }
         .history{
