@@ -252,11 +252,13 @@ body .menu .lunch .flat {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   padding-top: 10px;
-  width: 90%;
   margin: 0 auto;
   max-width: 70%;
   padding: 2rem 0;
   /* Grid images --------------------------------------------*/
+  grid-row-gap: 73px;
+  grid-column-gap: 40px;
+  padding-bottom: 20px;
 }
 @media (max-width: 599px) {
   body section.Masonry {
@@ -269,9 +271,6 @@ body .menu .lunch .flat {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
-}
-body .menu .lunch .flat-responsive {
-  display: flex;
 }
 body .menu .lunch .flat1 {
   grid-area: 1/1/2/2;
@@ -899,6 +898,49 @@ body .menu .flat9 {
     width: 80%;
     justify-content: space-between;
   }
+body .menu .ogm-info {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  width: 85%;
+  margin: 0 auto;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Eagle-Bold";
+}
+@media (min-width: 1200px) {
+  body .menu .ogm-info {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1200px) {
+  body .menu .ogm-info p {
+    margin-left: 80px;
+  }
+}
+body .menu .ogm-info img {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+@media (min-width: 1200px) {
+  body .menu .ogm-info img {
+    margin-top: -20px;
+  }
+}
+body .menu .extra {
+  padding-top: 30px;
+}
+body .menu .extra .all-title {
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 /*# sourceMappingURL=style.css.map */
