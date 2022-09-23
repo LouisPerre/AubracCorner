@@ -910,3 +910,408 @@ body {
         }
     }
 }
+
+
+footer{
+    background-color: #2D2D2D;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .suis-nous{
+        width: 25%;
+        height: 80%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        
+        .line{
+            display: block;
+            height: 1px;
+            width: 60%;
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+            margin-top: 5%;
+
+        }
+
+        img{
+            width: 100px;
+            height: 100px;
+            
+        }
+        .socialMedia{
+            width: 100px;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            i{
+                transform: scale(2);
+            }
+        }
+    }
+
+    .contactLinks{
+        width: 25%;
+        height: 40%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        .top{
+            width: 80%;
+            height: 30%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            // .tinyText{
+            // }
+
+            .line{
+                display: block;
+                height: 2px;
+                width: 80%;
+                
+                background-color: white;
+                border-radius: 5px;
+                margin-top: 5%;
+    
+            }
+        }
+        .bottom{
+            text-align:center ;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            height: 5%;
+
+        
+            p{
+                font-size: 20px;
+                color: white;
+
+            }
+
+        }
+    }
+    .legalMentions{
+        width: 25%;
+        height: 40%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        .top{
+            width: 80%;
+            height: 30%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+
+            .line{
+                display: block;
+                height: 1px;
+                width: 50%;
+                background-color: white;
+                border-radius: 5px;
+                margin-top: 5%;
+    
+            }
+        }
+        .bottom{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            width: 70%;
+            height: 5%;
+
+            a{
+                font-size: 20px;
+                color: white;
+            }
+            
+        }
+    }
+    
+}
+
+
+
+@include for-tablet-landscape-up(){
+    footer{
+    background-color: #2D2D2D;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    .suis-nous{
+        width: 25%;
+        height: 40%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        
+        .line{
+            display: block;
+            height: 1px;
+            width: 100%;
+            background-color: white;
+            border-radius: 5px;
+            margin-top: 5%;
+
+        }
+
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        .socialMedia{
+            width: 100px;
+            height: 30%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            i{
+                transform: scale(2);
+            }
+        }
+    }
+
+    .contactLinks{
+        width: 25%;
+        height: 30%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+
+        
+        
+        .top{
+            width: 80%;
+            height: 20%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            // .tinyText{
+            // }
+            .line{
+                display: block;
+                height: 1px;
+                width: 80%;
+                background-color:white;
+                border-radius: 5px;
+                margin-top: 5%;
+    
+            }
+            
+        }
+        .bottom{
+            text-align:center ;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            width: 100%;
+            height: 40%;
+            
+
+            p{
+                font-size: 20px;
+                color: white;
+
+            }
+
+        }
+    }
+    .legalMentions{
+        width: 50%;
+        height: 20%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        .top{
+
+            width: 80%;
+            height: 30%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+
+            .line{
+                display: block;
+                height: 1px;
+                width: 50%;
+                background-color: white;
+                border-radius: 5px;
+                margin-top: 5%;
+    
+            }
+        }
+        .bottom{
+            text-align:center ;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            width: 70%;
+            height: 5%;
+
+            a{
+                font-size: 20px;
+                color: white;
+            }
+            
+        }
+    }
+}
+}
+@include for-phone-only(){
+    footer{
+        text-align: center;
+        background-color: #2D2D2D;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        .suis-nous{
+            width: 25%;
+            height: 40%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            
+            .line{
+                display: block;
+                height: 1px;
+                width: 100%;
+                background-color: white;
+                border-radius: 5px;
+                margin-top: 5%;
+    
+            }
+    
+            img{
+                width: 100px;
+                height: 100px;
+            }
+            .socialMedia{
+                width: 100px;
+                height: 30%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                i{
+                    transform: scale(2);
+                }
+            }
+        }
+    
+        .contactLinks{
+            width: 35%;
+            height: 20%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+    
+            
+            
+            .top{
+                width: 80%;
+                height: 20%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+                // .tinyText{
+                // }
+                .line{
+                    display: block;
+                    height: 3px;
+                    width: 80%;
+                    background-color:white;
+                    border-radius: 5px;
+                    margin-top: 5%;
+        
+                }
+                
+            }
+            .bottom{
+                text-align:center ;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+                width: 100%;
+                height: 40%;
+                
+    
+                p{
+                    font-size: 20px;
+                    color: white;
+    
+                }
+    
+            }
+        }
+        .legalMentions{
+            width: 60%;
+            height: 20%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            .top{
+    
+                width: 80%;
+                height: 30%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+    
+                .line{
+                    display: block;
+                    height: 1px;
+                    width: 50%;
+                    background-color: white;
+                    border-radius: 5px;
+                    margin-top: 5%;
+        
+                }
+            }
+            .bottom{
+                text-align:center ;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+                width: 70%;
+                height: 5%;
+    
+                a{
+                    font-size: 20px;
+                    color: white;
+                }
+                
+            }
+        }
+    }
+}
