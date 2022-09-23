@@ -38,11 +38,11 @@ window.onscroll = function() {
 
     if (currentScroll > 0 && currentScroll < documentHeight - window.innerHeight ) {
         if (currentScroll > previousScroll) {
-            window.setTimeout(hideNav, 400)
+            window.setTimeout(hideNav, 300)
         } else if (currentScroll == previousScroll) {
-            window.setTimeout(showNav, 400)
+            window.setTimeout(showNav, 300)
         } else {
-            window.setTimeout(showNav, 400)
+            window.setTimeout(showNav, 300)
         }
         previousScroll = currentScroll
     }
@@ -61,19 +61,11 @@ function showNav() {
     document.querySelector(".main-navigation-scroll").classList.add("shadow")
 }
 
-
+// Slide Animations
 let slideElements = Array.from(document.querySelectorAll('.slide'))
 console.log(slideElements);
 
-
-// var slide1 = document.querySelector('.slide1');
-// var slide2 = document.querySelector('.slide2');
-// var slide3 = document.querySelector('.slide3');
-// var slide4 = document.querySelector('.slide4');
-
-
 window.addEventListener('scroll', scanElement)
-
 function scanElement() {
     slideElements.forEach(element => {
         if (isVisible(element)) {
@@ -85,7 +77,6 @@ function scanElement() {
         };
     });
 };
-
 function isVisible(element) {
     const elementDiv = element.getBoundingClientRect();
     let distanceFromTop = -50;

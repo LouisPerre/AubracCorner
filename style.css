@@ -166,6 +166,12 @@ body main .heroHeader .text {
   width: 500px;
   margin-left: 35rem;
 }
+@media screen and (max-width: 1200px) {
+  body main .heroHeader .text {
+    margin-left: unset;
+    text-align: center;
+  }
+}
 body main .bubble_small {
   transition: 0.5s ease-out;
   z-index: -1;
@@ -179,11 +185,6 @@ body main .bubble_big {
   position: absolute;
   top: 150vh;
   left: 0;
-@media screen and (max-width: 1200px) {
-  body main .heroHeader .text {
-    margin-left: unset;
-    text-align: center;
-  }
 }
 body main .history {
   width: 100%;
@@ -400,15 +401,15 @@ body main .history .content .paragraphBottom .text .sideSpan {
 }
 @media screen and (max-width: 900px) {
   body .hidden {
-    transform: translateY(30px) translateX(10px);
+    transform: translateY(0px) translateX(0px);
   }
   body main .bubble_small {
     top: 90vh;
-    right: 0;
+    right: 0vw;
   }
   body main .bubble_big {
     top: 130vh;
-    left: 0;
+    left: -10vw;
     transform: scale(0.5);
     margin-left: -20vh;
   }
@@ -419,8 +420,9 @@ body main .history .content .paragraphBottom .text .sideSpan {
   body main .history .icons {
     margin-top: 10%;
     z-index: 0;
-    margin-bottom: -20vh;
+    margin-bottom: -50vh;
     margin-right: 30%;
+    transform: scale(0.6);
   }
   body main .history .content {
     width: 100%;
@@ -465,7 +467,7 @@ body main .history .content .paragraphBottom .text .sideSpan {
     padding-inline: 20px;
     box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.24);
     margin-top: 10%;
-    margin-left: 10%;
+    margin-right: 5%;
   }
   body main .history .content .paragraphBottom .text {
     width: 90%;
@@ -486,7 +488,7 @@ body main .history .content .paragraphBottom .text .sideSpan {
 }
 @media screen and (max-width: 599px) {
   body .hidden {
-    transform: translateY(20px) translateX(5px);
+    transform: translateY(0px) translateX(0px);
   }
   body main .history {
     width: 100%;

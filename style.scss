@@ -206,7 +206,6 @@ body {
         }
 
         .bubble_small{
-            
             transition: 0.5s ease-out;
             z-index: -1;
             position: absolute;
@@ -214,7 +213,6 @@ body {
             right: 0;
         }
         .bubble_big{
-            
             transition: 0.5s ease-out;
             z-index: -1;
             position: absolute;
@@ -447,16 +445,16 @@ body {
 
     @include for-tablet-landscape-up {
         .hidden {
-            transform: translateY(30px) translateX(10px);
+            transform: translateY(0px) translateX(0px);
         }
         main{
             .bubble_small{
                 top: 90vh;
-                right: 0;
+                right: 0vw;
             }
             .bubble_big{
                 top: 130vh;
-                left: 0;
+                left: -10vw;
                 transform: scale(0.5);
                 margin-left: -20vh;
             }
@@ -467,8 +465,9 @@ body {
                 .icons{
                     margin-top: 10%;
                     z-index: 0;
-                    margin-bottom: -20vh;
+                    margin-bottom: -50vh;
                     margin-right: 30%;
+                    transform: scale(0.6);
                 }
                 .content{
                     width: 100%;
@@ -512,7 +511,7 @@ body {
                         padding-inline: 20px;
                         box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.24);
                         margin-top: 10%;
-                        margin-left: 10%;
+                        margin-right: 5%;
                         .text{
                             width: 90%;
                             height: 100%;
@@ -537,7 +536,7 @@ body {
 
     @include for-phone-only {
         .hidden {
-            transform: translateY(20px) translateX(5px);
+            transform: translateY(0px) translateX(0px);
         }
         main{
             .history{
