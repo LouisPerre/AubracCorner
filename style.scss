@@ -52,6 +52,7 @@
 // Main stream code
 .light{
     font-family: 'Eagle-Light';
+    margin-left: 10px;
     src: url(./fonts/Eagle-Light.otf);
 }
 
@@ -698,12 +699,15 @@ section.Masonry {
                 text-align: center;
                 font-size: 36px;
                 padding-top: 100px;
-
             }
             h2{
                 font-family: 'Eagle-Book';
                 text-align: center;
                 padding-top: 100px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
             }
             .formula{
                 display: flex;
@@ -853,22 +857,24 @@ section.Masonry {
                 width: 80%;
                 flex-wrap: wrap;
                 justify-content: space-around;
-                @include for-desktop-up(){
-              
-                    
-                }
             }
         }
-        // .title-responsive{
-        //     display: flex;
-        //     margin: 0 auto;
-        //     width: 100%;
-        //     justify-content: space-around;
-        //     flex-direction: column;
-        //     @include for-tablet-landscape-up(){
-        //         flex-direction: row;
-        //     }
-        // }
+        #night-menu{
+            display: none;
+        }
+        .right-arrow{
+            width: 50px;
+            margin-right: -40px;
+            transform: rotate(180deg);
+            cursor: pointer;
+        }
+        .left-arrow{
+            width: 50px;
+            cursor: pointer;
+            display: none;
+            margin-left: -40px;
+        }
+        
     }
 
     }}}}}}

@@ -37,6 +37,7 @@ body .shown {
 }
 body .light {
   font-family: "Eagle-Light";
+  margin-left: 10px;
   src: url(./fonts/Eagle-Light.otf);
 }
 
@@ -198,6 +199,10 @@ body .menu h2 {
   font-family: "Eagle-Book";
   text-align: center;
   padding-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 body .menu .formula {
   display: flex;
@@ -941,6 +946,21 @@ body .menu .extra .all-title {
   width: 80%;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+body .menu #night-menu {
+  display: none;
+}
+body .menu .right-arrow {
+  width: 50px;
+  margin-right: -40px;
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+body .menu .left-arrow {
+  width: 50px;
+  cursor: pointer;
+  display: none;
+  margin-left: -40px;
 }
 
 /*# sourceMappingURL=style.css.map */
