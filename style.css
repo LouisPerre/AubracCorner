@@ -65,7 +65,6 @@ body #DivbuttonDark {
   right: 0;
   margin: 0 10px 10px 0;
   z-index: 8000;
-  display: none;
 }
 body #DivbuttonDark #buttonDark {
   border-radius: 9999px;
@@ -79,11 +78,6 @@ body #DivbuttonDark #buttonDark #imgButton {
   border-radius: 9999px;
   transition: all 0.3s ease;
   background-color: white;
-}
-@media screen and (max-width: 900px) {
-  body #DivbuttonDark {
-    display: block;
-  }
 }
 body header {
   z-index: 1000;
@@ -108,7 +102,7 @@ body header.active nav ul li {
   display: block;
 }
 body header.is-hidden {
-  -webkit-transform: translate(0, -60px);
+  -webkit-transform: translate(0, -120px);
   transition: 0.5s ease;
 }
 body header.is-visible {
@@ -166,6 +160,12 @@ body main .heroHeader .text {
   width: 500px;
   margin-left: 35rem;
 }
+@media screen and (max-width: 1200px) {
+  body main .heroHeader .text {
+    margin-left: unset;
+    text-align: center;
+  }
+}
 body main .bubble_small {
   transition: 0.5s ease-out;
   z-index: -1;
@@ -179,11 +179,6 @@ body main .bubble_big {
   position: absolute;
   top: 150vh;
   left: 0;
-@media screen and (max-width: 1200px) {
-  body main .heroHeader .text {
-    margin-left: unset;
-    text-align: center;
-  }
 }
 body main .history {
   width: 100%;
