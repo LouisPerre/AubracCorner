@@ -1,7 +1,17 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
+  /* Propriété standard */
+  -moz-user-select: none;
+  /* Firefox */
+  -webkit-user-select: none;
+  /* Chrome, Safari, Opéra depuis la version 15 */
+  -ms-user-select: none;
+  /* Internet explorer depuis la version 10 et Edge */
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -16,6 +26,17 @@
   font-family: "Eagle-Book";
   src: url(./fonts/eagle-5.ttf);
 }
+.hidden {
+  transform: translateY(120px) translateX(20px);
+}
+
+.shown {
+  top: 0;
+  opacity: 1;
+  transform: translateY(0px) translateX(0px);
+  transition: 0.2s ease-in;
+}
+
 body .tinyText {
   font-family: "Epilogue", sans-serif;
   font-size: 20px;
@@ -50,7 +71,6 @@ body header {
   transition: top 0.2s ease-in-out;
 }
 body header.is-hidden {
-  opacity: 0;
   -webkit-transform: translate(0, -60px);
   transition: 0.5s ease;
 }
@@ -100,12 +120,14 @@ body main .heroHeader .text {
   margin-left: 35rem;
 }
 body main .bubble_small {
+  transition: 0.5s ease-out;
   z-index: -1;
   position: absolute;
   top: 100vh;
   right: 0;
 }
 body main .bubble_big {
+  transition: 0.5s ease-out;
   z-index: -1;
   position: absolute;
   top: 150vh;
@@ -120,6 +142,7 @@ body main .history {
   flex-direction: column;
 }
 body main .history .icons {
+  transition: 0.5s ease-out;
   margin-top: 10%;
   z-index: 0;
   margin-bottom: -6.5%;
@@ -134,6 +157,7 @@ body main .history .content {
   height: 100%;
 }
 body main .history .content .paragraphTop {
+  transition: 0.5s ease-out;
   font-family: "Eagle-Book";
   z-index: 3;
   width: 35%;
@@ -193,11 +217,13 @@ body main .history .content .paragraphTop .text .sideSpan {
   border-radius: 5px;
 }
 body main .history .content .imageRight {
+  transition: 0.5s ease-out;
   transform: scale(0.9);
   margin-right: -30%;
   z-index: 2;
 }
 body main .history .content .paragraphBottom {
+  transition: 0.5s ease-out;
   font-family: "Eagle-Book";
   z-index: 0;
   width: 35%;
@@ -237,6 +263,9 @@ body main .history .content .paragraphBottom .text .sideSpan {
   border-radius: 5px;
 }
 @media screen and (max-width: 1200px) {
+  body .hidden {
+    transform: translateY(50px) translateX(10px);
+  }
   body main .bubble_small {
     top: 100vh;
     right: 0;
@@ -318,6 +347,9 @@ body main .history .content .paragraphBottom .text .sideSpan {
   }
 }
 @media screen and (max-width: 900px) {
+  body .hidden {
+    transform: translateY(30px) translateX(10px);
+  }
   body main .bubble_small {
     top: 90vh;
     right: 0;
@@ -401,6 +433,9 @@ body main .history .content .paragraphBottom .text .sideSpan {
   }
 }
 @media screen and (max-width: 599px) {
+  body .hidden {
+    transform: translateY(20px) translateX(5px);
+  }
   body main .history {
     width: 100%;
     height: 125vh;

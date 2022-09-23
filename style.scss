@@ -2,23 +2,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none; /* Propriété standard */
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+    -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+    scroll-behavior: smooth;
 }
+
+
 
 @font-face {
     font-family: 'Eagle-Bold';
     src: url(./fonts/Eagle-Bold.otf);
 }
-
 @font-face {
     font-family: 'Eagle-Light';
     src: url(./fonts/Eagle-Light.otf);
 }
-
 @font-face {
     font-family: 'Eagle-Book';
     src: url(./fonts/eagle-5.ttf);
 }
 
+// Mixins (responsive)
 @mixin for-phone-only {
     @media screen and (max-width: 599px) { @content; }
   }
@@ -32,6 +38,18 @@
     @media screen and (max-width: 1800px) { @content; }
   }
 
+// Animation classes
+.hidden {
+    transform: translateY(120px) translateX(20px);
+}
+.shown {
+    top: 0;
+    opacity: 1;
+    transform: translateY(0px) translateX(0px);
+    transition: 0.2s ease-in;
+}
+
+// Main stream code
 body {
     .tinyText {
         font-family: 'Epilogue', sans-serif;
@@ -59,6 +77,8 @@ body {
         background-color: red;
     }
 
+
+
     header {
         z-index: 1000;
         display: flex;
@@ -71,7 +91,7 @@ body {
         transition: top 0.2s ease-in-out;
 
         &.is-hidden {
-            opacity: 0;
+            
             -webkit-transform: translate(0,-60px);
             transition: .5s ease;
           }
@@ -114,7 +134,7 @@ body {
         }
     }
 
-    main {
+    main {        
         .heroHeader {
             height: calc(100vh - 100px);
             background-image: url(./img/img-desktop-pain-scaled.jpeg);
@@ -131,12 +151,16 @@ body {
         }
 
         .bubble_small{
+            
+            transition: 0.5s ease-out;
             z-index: -1;
             position: absolute;
             top: 100vh;
             right: 0;
         }
         .bubble_big{
+            
+            transition: 0.5s ease-out;
             z-index: -1;
             position: absolute;
             top: 150vh;
@@ -150,6 +174,8 @@ body {
             align-items: center;
             flex-direction: column;
             .icons{
+                
+                transition: 0.5s ease-out;
                 margin-top: 10%;
                 z-index: 0;
                 margin-bottom: -6.5%;
@@ -163,6 +189,8 @@ body {
                 width: 100%;
                 height: 100%;
                 .paragraphTop{
+                    
+                    transition: 0.5s ease-out;
                     font-family: 'Eagle-Book';
                     z-index: 3;
                     width: 35%;
@@ -222,11 +250,15 @@ body {
                     }
                 }
                 .imageRight{
+                    
+                    transition: 0.5s ease-out;
                     transform: scale(0.9);
                     margin-right: -30%;
                     z-index: 2;
                 }
                 .paragraphBottom{
+                    
+                    transition: 0.5s ease-out;
                     font-family: 'Eagle-Book';
                     z-index: 0;
                     width: 35%;
@@ -271,6 +303,9 @@ body {
 
 
     @include for-desktop-up {
+        .hidden {
+            transform: translateY(50px) translateX(10px);
+        }
         main{
             .bubble_small{
                 top: 100vh;
@@ -356,6 +391,9 @@ body {
     }
 
     @include for-tablet-landscape-up {
+        .hidden {
+            transform: translateY(30px) translateX(10px);
+        }
         main{
             .bubble_small{
                 top: 90vh;
@@ -443,6 +481,9 @@ body {
     }
 
     @include for-phone-only {
+        .hidden {
+            transform: translateY(20px) translateX(5px);
+        }
         main{
             .history{
                 width: 100%;

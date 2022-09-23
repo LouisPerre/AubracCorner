@@ -41,3 +41,34 @@ function showNav() {
     document.querySelector('#navigation-scroll').style.display = 'block'
     document.querySelector(".main-navigation-scroll").classList.add("shadow")
 }
+
+
+let slideElements = Array.from(document.querySelectorAll('.slide'))
+console.log(slideElements);
+
+
+// var slide1 = document.querySelector('.slide1');
+// var slide2 = document.querySelector('.slide2');
+// var slide3 = document.querySelector('.slide3');
+// var slide4 = document.querySelector('.slide4');
+
+
+window.addEventListener('scroll', scanElement)
+
+function scanElement() {
+    slideElements.forEach(element => {
+        if (isVisible(element)) {
+            element.classList.add('shown3');
+            element.classList.remove('hidden');
+        } else {
+            element.classList.remove('shown3');
+            element.classList.add('hidden');
+        };
+    });
+};
+
+function isVisible(element) {
+    const elementDiv = element.getBoundingClientRect();
+    let distanceFromTop = -50;
+    return elementDiv.top - window.innerHeight < distanceFromTop ? true : false;
+}
