@@ -129,6 +129,19 @@ body {
                 margin-left: 35rem;
             }
         }
+
+        .bubble_small{
+            z-index: -1;
+            position: absolute;
+            top: 100vh;
+            right: 0;
+        }
+        .bubble_big{
+            z-index: -1;
+            position: absolute;
+            top: 150vh;
+            left: 0;
+        }
         .history{
             width: 100%;
             height: 150vh;
@@ -259,6 +272,17 @@ body {
 
     @include for-desktop-up {
         main{
+            .bubble_small{
+                top: 100vh;
+                right: 0;
+            }
+            .bubble_big{
+                top: 150vh;
+                left: 0;
+                transform: scale(0.8);
+                margin-left: -10vw;
+            }
+
             .history{
                 width: 100%;
                 height: 150vh;
@@ -333,6 +357,17 @@ body {
 
     @include for-tablet-landscape-up {
         main{
+            .bubble_small{
+                top: 90vh;
+                right: 0;
+            }
+            .bubble_big{
+                top: 130vh;
+                left: 0;
+                transform: scale(0.5);
+                margin-left: -20vh;
+            }
+
             .history{
                 width: 100%;
                 height: 100vh;
