@@ -22,12 +22,12 @@ if (DATE >= CHANGETIME) {
 }
 
 function changeStyle() {
-    if (imgToChange.style.backgroundColor === 'white') {
+    if (imgToChange.style.backgroundColor === 'transparent') {
         imgToChange.src = imageLight
         imgToChange.style.backgroundColor = "#303030"
     } else {
         imgToChange.src = imageDark
-        imgToChange.style.backgroundColor = "white" 
+        imgToChange.style.backgroundColor = "transparent" 
     }
 }
 
@@ -37,8 +37,6 @@ window.onscroll = function() {
     // console.log(currentScroll)
 
     if (currentScroll > 0 && currentScroll < documentHeight - window.innerHeight ) {
-        console.log('lala')
-
         if (currentScroll > previousScroll) {
             window.setTimeout(hideNav, 300)
         } else if (currentScroll == previousScroll) {
@@ -46,7 +44,6 @@ window.onscroll = function() {
         } else {
             window.setTimeout(showNav, 300)
         }
-
         previousScroll = currentScroll
     }
 }
@@ -91,22 +88,6 @@ if (window.screen.width <= 900) {
     document.getElementById('menuBurgerListener').addEventListener('click', () => {
         document.getElementById("header").classList.toggle('active')
     })
-function dayMenu() {
-    document.getElementById("day-menu").style.display = "none";
-    document.getElementById("formula").style.display = "none";
-    document.getElementById("lunch-title").style.display = "none";
-    document.getElementById("left-arrow").style.display = "flex";
-    document.getElementById("right-arrow").style.display = "none";
-    document.getElementById("night-menu").style.display = "flex";
-}
-
-function nightMenu() {
-    document.getElementById("day-menu").style.display = "flex";
-    document.getElementById("formula").style.display = "flex";
-    document.getElementById("lunch-title").style.display = "block";
-    document.getElementById("left-arrow").style.display = "none";
-    document.getElementById("right-arrow").style.display = "flex";
-    document.getElementById("night-menu").style.display = "none";
 }
 
 
