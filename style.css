@@ -1215,4 +1215,347 @@ body footer .legalMentions .bottom a {
   }
 }
 
+footer {
+  background-color: #2D2D2D;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .suis-nous {
+  width: 25%;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+footer .suis-nous .line {
+  display: block;
+  height: 1px;
+  width: 60%;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 5%;
+}
+footer .suis-nous img {
+  width: 100px;
+  height: 100px;
+}
+footer .suis-nous .socialMedia {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .suis-nous .socialMedia i {
+  transform: scale(2);
+}
+footer .contactLinks {
+  width: 25%;
+  height: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+footer .contactLinks .top {
+  width: 80%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+footer .contactLinks .top .line {
+  display: block;
+  height: 2px;
+  width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 5%;
+}
+footer .contactLinks .bottom {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 5%;
+}
+footer .contactLinks .bottom p {
+  font-size: 20px;
+  color: white;
+}
+footer .legalMentions {
+  width: 25%;
+  height: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+footer .legalMentions .top {
+  width: 80%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+footer .legalMentions .top .line {
+  display: block;
+  height: 1px;
+  width: 50%;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 5%;
+}
+footer .legalMentions .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 70%;
+  height: 5%;
+}
+footer .legalMentions .bottom a {
+  font-size: 20px;
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  footer {
+    background-color: #2D2D2D;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .suis-nous {
+    width: 25%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .suis-nous .line {
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+  footer .suis-nous img {
+    width: 100px;
+    height: 100px;
+  }
+  footer .suis-nous .socialMedia {
+    width: 100px;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  footer .suis-nous .socialMedia i {
+    transform: scale(2);
+  }
+  footer .contactLinks {
+    width: 25%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .contactLinks .top {
+    width: 80%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .contactLinks .top .line {
+    display: block;
+    height: 1px;
+    width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+  footer .contactLinks .bottom {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 40%;
+  }
+  footer .contactLinks .bottom p {
+    font-size: 20px;
+    color: white;
+  }
+  footer .legalMentions {
+    width: 50%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .legalMentions .top {
+    width: 80%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .legalMentions .top .line {
+    display: block;
+    height: 1px;
+    width: 50%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+  footer .legalMentions .bottom {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 70%;
+    height: 5%;
+  }
+  footer .legalMentions .bottom a {
+    font-size: 20px;
+    color: white;
+  }
+}
+@media screen and (max-width: 599px) {
+  footer {
+    text-align: center;
+    background-color: #2D2D2D;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .suis-nous {
+    width: 25%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .suis-nous .line {
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+  footer .suis-nous img {
+    width: 100px;
+    height: 100px;
+  }
+  footer .suis-nous .socialMedia {
+    width: 100px;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  footer .suis-nous .socialMedia i {
+    transform: scale(2);
+  }
+  footer .contactLinks {
+    width: 35%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .contactLinks .top {
+    width: 80%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .contactLinks .top .line {
+    display: block;
+    height: 3px;
+    width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+  footer .contactLinks .bottom {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 40%;
+  }
+  footer .contactLinks .bottom p {
+    font-size: 20px;
+    color: white;
+  }
+  footer .legalMentions {
+    width: 60%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .legalMentions .top {
+    width: 80%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .legalMentions .top .line {
+    display: block;
+    height: 1px;
+    width: 50%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+  footer .legalMentions .bottom {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 70%;
+    height: 5%;
+  }
+  footer .legalMentions .bottom a {
+    font-size: 20px;
+    color: white;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
