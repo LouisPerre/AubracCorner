@@ -41,6 +41,11 @@ body .light {
   src: url(./fonts/Eagle-Light.otf);
 }
 
+.light {
+  font-family: "Eagle-Light";
+  margin-left: 10px;
+  src: url(./fonts/Eagle-Light.otf);
+}
 .green {
   color: #2b8c08 !important;
 }
@@ -48,10 +53,7 @@ body .light {
 .blue {
   color: #06277B;
 }
-body body {
-  font-family: "Eagle-Light";
-}
-body body .tinyText {
+body .tinyText {
   font-family: "Epilogue", sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -181,6 +183,50 @@ body body main .heroHeader .text {
     text-align: center;
   }
 }
+body main .bubble_small {
+  transition: 0.5s ease-out;
+  z-index: -1;
+  position: absolute;
+  top: 100vh;
+  right: 0;
+}
+body main .bubble_big {
+  transition: 0.5s ease-out;
+  z-index: -1;
+  position: absolute;
+  top: 150vh;
+  left: 0;
+}
+body main .bubble_small_menu {
+  transition: 0.5s ease-out;
+  z-index: -1;
+  position: absolute;
+  top: 290vh;
+  right: 25vw;
+}
+body main .first_layer_wave {
+  transition: 0.5s ease-out;
+  z-index: -2;
+  position: absolute;
+  width: 100%;
+  top: 290vh;
+  left: 0;
+}
+@media screen and (max-width: 1800px) {
+  body main .first_layer_wave {
+    display: none;
+    background-color: red;
+  }
+}
+body main .history {
+  width: 100%;
+  height: 150vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 35vh;
+  
 body section.Masonry {
   /* Grids --------------------------------------------*/
   display: grid;
@@ -285,6 +331,310 @@ body section.Masonry img {
   width: 100%;
   object-fit: cover;
 }
+body main .history .content .paragraphBottom .text .storyText {
+  margin-top: 10%;
+  width: 80ch;
+  padding: 25px;
+  text-align: right;
+  line-height: 24px;
+  font-size: 16px;
+}
+body main .history .content .paragraphBottom .text .sideSpan {
+  width: 5px;
+  height: 80%;
+  background-color: #C64E1C;
+  border-radius: 5px;
+}
+body main .menu {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 25vh;
+}
+body main .menu h1 {
+  font-family: "Eagle-Book";
+  text-align: center;
+  font-size: 36px;
+  padding-top: 100px;
+}
+body main .menu h2 {
+  font-family: "Eagle-Book";
+  text-align: center;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+body main .menu .formula {
+  display: flex;
+  width: 90%;
+  margin: 10px auto;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+body main .menu .formula p {
+  text-align: center;
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  body main .menu .formula {
+    width: 668px;
+  }
+}
+body main .menu .logo-menu {
+  transition: 0.5s ease-out;
+  max-width: 54%;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 30vh;
+}
+body main .menu .dot {
+  height: 50px;
+  width: 50px;
+  border: 0.1875em solid #0F1C3F;
+  border-color: black;
+  border-radius: 50%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+body main .menu .dot p {
+  display: flex;
+  justify-content: center;
+  padding-top: 14px;
+}
+body main .menu .lunch {
+  transition: 0.5s ease-out;
+  background-color: rgba(255, 255, 255, 0.741);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.116);
+  border-radius: 15px;
+  padding: 50px;
+}
+body main .menu .lunch .title {
+  color: #06277B;
+}
+body main .menu .lunch .subtitle {
+  text-align: center;
+  padding-top: 20px;
+  color: #C64E1C;
+}
+body main .menu .lunch h3 {
+  text-align: center;
+  padding-top: 30px;
+  color: #06277B;
+  font-family: "Eagle-Bold";
+}
+body main .menu .lunch p {
+  text-align: center;
+}
+body main .menu .lunch .flat {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding-top: 10px;
+  margin: 0 auto;
+  grid-row-gap: 73px;
+  grid-column-gap: 40px;
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 900px) {
+  body main .menu .lunch .flat {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+body main .menu .lunch .flat1 {
+  grid-area: 1/1/2/2;
+}
+body main .menu .lunch .flat2 {
+  grid-area: 1/2/2/3;
+}
+body main .menu .lunch .flat3 {
+  grid-area: 1/3/2/4;
+}
+@media screen and (max-width: 900px) {
+  body main .menu .lunch .flat3 {
+    grid-area: 2/1/3/2;
+  }
+}
+body main .menu .flat4 {
+  grid-area: 2/1/3/2;
+}
+@media screen and (max-width: 900px) {
+  body main .menu .flat4 {
+    grid-area: 2/2/3/3;
+  }
+}
+body main .menu .flat5 {
+  grid-area: 2/2/3/3;
+}
+@media screen and (max-width: 900px) {
+  body main .menu .flat5 {
+    grid-area: 3/1/4/2;
+  }
+}
+body main .menu .flat6 {
+  grid-area: 2/3/3/4;
+}
+@media screen and (max-width: 900px) {
+  body main .menu .flat6 {
+    grid-area: 3/2/4/3;
+  }
+}
+body main .menu .flat7 {
+  grid-area: 3/1/4/2;
+}
+@media screen and (max-width: 900px) {
+  body main .menu .flat7 {
+    grid-area: 4/1/5/2;
+  }
+}
+body main .menu .flat8 {
+  grid-area: 3/2/4/3;
+}
+@media screen and (max-width: 900px) {
+  body main .menu .flat8 {
+    grid-area: 4/2/5/3;
+  }
+}
+body main .menu .flat9 {
+  grid-area: 3/3/4/4;
+}
+@media screen and (max-width: 900px) {
+  body main .menu .flat9 {
+    grid-area: 5/1/6/3;
+  }
+}
+body main .menu .ogm-info {
+  transition: 0.5s ease-out;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  width: 85%;
+  margin: 0 auto;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  font-family: "Eagle-Bold";
+}
+@media screen and (max-width: 1200px) {
+  body main .menu .ogm-info {
+    flex-direction: column;
+  }
+}
+body main .menu .ogm-info p {
+  margin-left: 80px;
+}
+@media screen and (max-width: 1200px) {
+  body main .menu .ogm-info p {
+    margin-left: 0px;
+  }
+}
+body main .menu .ogm-info img {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: -20px;
+}
+@media screen and (max-width: 1200px) {
+  body main .menu .ogm-info img {
+    margin-top: 0px;
+  }
+}
+body main .menu .extra {
+  padding-top: 30px;
+}
+body main .menu .extra .all-title {
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+body main .menu #night-menu {
+  display: none;
+}
+body main .menu .right-arrow {
+  width: 50px;
+  margin-right: -40px;
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+body main .menu .left-arrow {
+  width: 50px;
+  cursor: pointer;
+  display: none;
+  margin-left: -40px;
+}
+body main section.Masonry {
+  /* Grids --------------------------------------------*/
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 150px);
+  margin: 0 auto;
+  max-width: 70%;
+  padding: 2rem 0;
+  /* Grid images --------------------------------------------*/
+  /* Grid items --------------------------------------------*/
+}
+@media screen and (max-width: 599px) {
+  body main section.Masonry {
+    display: flex;
+    grid-gap: 1rem;
+    max-width: 95%;
+  }
+}
+body main section.Masonry img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 599px) {
+  body main section.Masonry img {
+    width: 100%;
+  }
+}
+body main section.Masonry .item-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+body main section.Masonry .item-2 {
+  grid-row: 1/3;
+  grid-column: 2;
+}
+body main section.Masonry .item-3 {
+  grid-row: 0;
+  grid-column: 3;
+  width: 50%;
+}
+body main section.Masonry .item-4 {
+  grid-row: 2;
+  grid-column: 1/2;
+}
+body main section.Masonry .item-5 {
+  grid-row: 1/4;
+  grid-column: 3;
+}
+@media screen and (max-width: 599px) {
+  body main section.Masonry .item-5 {
+    display: none;
+  }
+}
+body main section.Masonry .item-6 {
+  grid-row: 3;
+  grid-column: 1/3;
+}
+body main section.Masonry .item-7 {
+  grid-row: 3;
+  grid-column: 2/4;
+}
+@media screen and (max-width: 1200px) {
+  body .hidden {
+
 @media (max-width: 599px) {
   body section.Masonry img {
     width: 100%;
@@ -526,6 +876,346 @@ body section.Masonry img {
     grid-column: 2;
   }
 }
+body footer {
+  background-color: #2D2D2D;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -10vh;
+}
+body footer .suis-nous {
+  width: 25%;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+body footer .suis-nous .line {
+  display: block;
+  height: 1px;
+  width: 60%;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 5%;
+}
+body footer .suis-nous img {
+  width: 100px;
+  height: 100px;
+}
+body footer .suis-nous .socialMedia {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+body footer .suis-nous .socialMedia i {
+  transform: scale(2);
+}
+body footer .contactLinks {
+  width: 25%;
+  height: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+body footer .contactLinks .top {
+  width: 80%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+body footer .contactLinks .top .line {
+  display: block;
+  height: 2px;
+  width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 5%;
+}
+body footer .contactLinks .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 70%;
+  height: 5%;
+}
+body footer .contactLinks .bottom p {
+  font-size: 20px;
+  color: white;
+}
+body footer .legalMentions {
+  width: 25%;
+  height: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+body footer .legalMentions .top {
+  width: 80%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+body footer .legalMentions .top .line {
+  display: block;
+  height: 1px;
+  width: 50%;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 5%;
+}
+body footer .legalMentions .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 70%;
+  height: 5%;
+}
+body footer .legalMentions .bottom a {
+  font-size: 20px;
+  color: white;
+}
+@media screen and (max-width: 900px) {
+  body footer {
+    background-color: #2D2D2D;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  body footer .suis-nous {
+    width: 25%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  body footer .suis-nous .line {
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+  body footer .suis-nous img {
+    width: 100px;
+    height: 100px;
+  }
+  body footer .suis-nous .socialMedia {
+    width: 100px;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  body footer .suis-nous .socialMedia i {
+    transform: scale(2);
+  }
+  body footer .contactLinks {
+    width: 25%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  body footer .contactLinks .top {
+    width: 80%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  body footer .contactLinks .top .line {
+    display: block;
+    height: 1px;
+    width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+  body footer .contactLinks .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 40%;
+  }
+  body footer .contactLinks .bottom p {
+    font-size: 20px;
+    color: white;
+  }
+  body footer .legalMentions {
+    width: 50%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  body footer .legalMentions .top {
+    width: 80%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  body footer .legalMentions .top .line {
+    display: block;
+    height: 1px;
+    width: 50%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+  body footer .legalMentions .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 70%;
+    height: 5%;
+  }
+  body footer .legalMentions .bottom a {
+    font-size: 20px;
+    color: white;
+  }
+}
+@media screen and (max-width: 599px) {
+  body footer {
+    background-color: #2D2D2D;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  body footer .suis-nous {
+    width: 25%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  body footer .suis-nous .line {
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+  body footer .suis-nous img {
+    width: 100px;
+    height: 100px;
+  }
+  body footer .suis-nous .socialMedia {
+    width: 100px;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  body footer .suis-nous .socialMedia i {
+    transform: scale(2);
+  }
+  body footer .contactLinks {
+    width: 35%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  body footer .contactLinks .top {
+    width: 80%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  body footer .contactLinks .top .line {
+    display: block;
+    height: 3px;
+    width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+  body footer .contactLinks .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 40%;
+  }
+  body footer .contactLinks .bottom p {
+    font-size: 20px;
+    color: white;
+  }
+  body footer .legalMentions {
+    width: 60%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  body footer .legalMentions .top {
+    width: 80%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  body footer .legalMentions .top .line {
+    display: block;
+    height: 1px;
+    width: 50%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+  body footer .legalMentions .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 70%;
+    height: 5%;
+  }
+  body footer .legalMentions .bottom a {
+    font-size: 20px;
+    color: white;
+  }
+}
+@media screen and (max-width: 900px) {
+  body .hidden {
+
 @media (max-width: 599px) and (min-width: 1200px) and (min-width: 900px) {
   body section.Masonry img .item-1 .item-2 .hidden {
     transform: translateY(0px) translateX(0px);
@@ -961,6 +1651,349 @@ body .menu .left-arrow {
   cursor: pointer;
   display: none;
   margin-left: -40px;
+}
+
+footer {
+  background-color: #2D2D2D;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .suis-nous {
+  width: 25%;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+footer .suis-nous .line {
+  display: block;
+  height: 1px;
+  width: 60%;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 5%;
+}
+footer .suis-nous img {
+  width: 100px;
+  height: 100px;
+}
+footer .suis-nous .socialMedia {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .suis-nous .socialMedia i {
+  transform: scale(2);
+}
+footer .contactLinks {
+  width: 25%;
+  height: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+footer .contactLinks .top {
+  width: 80%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+footer .contactLinks .top .line {
+  display: block;
+  height: 2px;
+  width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 5%;
+}
+footer .contactLinks .bottom {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 5%;
+}
+footer .contactLinks .bottom p {
+  font-size: 20px;
+  color: white;
+}
+footer .legalMentions {
+  width: 25%;
+  height: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+footer .legalMentions .top {
+  width: 80%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+footer .legalMentions .top .line {
+  display: block;
+  height: 1px;
+  width: 50%;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 5%;
+}
+footer .legalMentions .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 70%;
+  height: 5%;
+}
+footer .legalMentions .bottom a {
+  font-size: 20px;
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  footer {
+    background-color: #2D2D2D;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .suis-nous {
+    width: 25%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .suis-nous .line {
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+  footer .suis-nous img {
+    width: 100px;
+    height: 100px;
+  }
+  footer .suis-nous .socialMedia {
+    width: 100px;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  footer .suis-nous .socialMedia i {
+    transform: scale(2);
+  }
+  footer .contactLinks {
+    width: 25%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .contactLinks .top {
+    width: 80%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .contactLinks .top .line {
+    display: block;
+    height: 1px;
+    width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+  footer .contactLinks .bottom {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 40%;
+  }
+  footer .contactLinks .bottom p {
+    font-size: 20px;
+    color: white;
+  }
+  footer .legalMentions {
+    width: 50%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .legalMentions .top {
+    width: 80%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .legalMentions .top .line {
+    display: block;
+    height: 1px;
+    width: 50%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+  footer .legalMentions .bottom {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 70%;
+    height: 5%;
+  }
+  footer .legalMentions .bottom a {
+    font-size: 20px;
+    color: white;
+  }
+}
+@media screen and (max-width: 599px) {
+  footer {
+    text-align: center;
+    background-color: #2D2D2D;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .suis-nous {
+    width: 25%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .suis-nous .line {
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+  footer .suis-nous img {
+    width: 100px;
+    height: 100px;
+  }
+  footer .suis-nous .socialMedia {
+    width: 100px;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  footer .suis-nous .socialMedia i {
+    transform: scale(2);
+  }
+  footer .contactLinks {
+    width: 35%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .contactLinks .top {
+    width: 80%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .contactLinks .top .line {
+    display: block;
+    height: 3px;
+    width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+  footer .contactLinks .bottom {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 40%;
+  }
+  footer .contactLinks .bottom p {
+    font-size: 20px;
+    color: white;
+  }
+  footer .legalMentions {
+    width: 60%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .legalMentions .top {
+    width: 80%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .legalMentions .top .line {
+    display: block;
+    height: 1px;
+    width: 50%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+  }
+  footer .legalMentions .bottom {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 70%;
+    height: 5%;
+  }
+  footer .legalMentions .bottom a {
+    font-size: 20px;
+    color: white;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
